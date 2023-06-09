@@ -22,8 +22,16 @@ models = {
 
 @bot.event
 async def on_ready():
+    print(f"{bot.user} aka {bot.user.name} has connected to Discord!")
+
+    invite_link = discord.utils.oauth_url(
+        bot.user.id,
+        permissions=discord.Permissions(),
+        scopes=("bot", "applications.commands")
+    )
     synced = await bot.tree.sync()
     print(f'Synced {len(synced)} commands.')
+    print(f"\n\nInvite your Discrd bot using the following invite: {invite_link}\n\n")
     
 @bot.command(name='test', description='ping the bot')
 async def test(interaction: discord.Interaction):
