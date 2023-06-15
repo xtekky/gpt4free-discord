@@ -43,7 +43,7 @@ async def test(interaction: discord.Interaction):
 async def help(interaction: discord.Interaction):
     
     embed = discord.Embed( title='g4f.ai help', 
-        description='available models:\n```asm\ngpt-4\ngpt-3.5-turbo\nclaude-v1\nclaude-instant\nclaude-instant-100k\n```\ncommands:\n```asm\n/help\n/create <prompt> <model (default: gpt-4)>\n```',
+        description='available models:\n```asm\ngpt-4\ngpt-3.5-turbo\nclaude-v1\nclaude-instant\nclaude-instant-100k\nsage\n```\ncommands:\n```asm\n/help\n/create <prompt> <model (default: gpt-4)>\n```',
         color=8716543)
     
     await interaction.response.send_message(embed=embed)
