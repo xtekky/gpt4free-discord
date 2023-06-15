@@ -58,7 +58,7 @@ async def say(interaction: discord.Interaction, prompt: str, model: str = 'gpt-4
         system = 'system: your response will be rendered in a discord message, include language hints when returning code like: ```py ...```, and use * or ** or > to create highlights ||\n prompt: '
         
         token = random.choice(open('tokens.txt', 'r').read().splitlines())
-        client = poe.Client(token.split(':')[0])
+        client = poe.Client(token)
         
         await interaction.response.send_message(base)
         base += '\n'
