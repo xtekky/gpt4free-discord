@@ -96,7 +96,6 @@ async def say(interaction: discord.Interaction, prompt: str, model: str = 'gpt-4
                 break
             except Exception as e:
                 print("invalid token，Attempting other token", "exception code：", e)
-                traceback.print_exc()
             else:
                 break
         if flagNum > 10:
